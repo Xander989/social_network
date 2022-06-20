@@ -1,0 +1,65 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    background: rgb(255,255,255);
+}
+
+#MainPageImg {
+    display: relative;
+    width: 100% ;
+    height: auto;
+    overflow: hidden;
+    max-height: 690px;
+}
+
+#top-navigation-container {
+    position: relative;
+    padding-bottom: 0.7%;
+    background-color: rgb(50,50,50);
+}
+
+.MainButtons {
+    text-decoration: none;
+    position: relative;
+    left: 80%;
+    top: 0.3em;
+    font-size: 15px;
+    color: rgb(210,210,210);
+    font-style: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 1s;
+}
+
+.MainButtons:active {
+    color: white;
+}
+.MainButtons:hover {
+    color: rgb(245,245,245);
+}
+
+#Reg {
+    margin-left: 3%;
+}
+
+#Introducing {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    font-size: 50px;
+    text-align: center;
+    font-style: normal;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    opacity: 100%;
+    animation-name: body;
+    animation-duration: 3s;
+  }
+
+
+@keyframes body {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
