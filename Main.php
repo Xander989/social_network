@@ -2,7 +2,26 @@
 require_once 'files/login.php';
 $conn = new mysqli($hn,$un,$pw,$db);
 if ($conn->connect_error) die("Fatal error");
+$query = "SELECT * FROM classics";
+$result = $conn->query($query);
+if (!$result) die ("Fatal error");
 
+$rows = $result->num_rows;
+
+for ($j = 0 ; $j < $rows ; ++$j)
+ {
+    $row = $result->fetch_array(MYSQLI_ASSOC);
+
+    echo 'Author: ' .htmlspecialchars($row['author']) ."\n";
+    echo 'Title: ' .htmlspecialchars($row['title']) ."\n";
+    echo 'Category: ' .htmlspecialchars($row['category']) ."\n";
+    echo 'Year: ' .htmlspecialchars($row['year']) ."\n";
+    echo 'ISBN: ' .htmlspecialchars($row['isbn']) ."\n\n";
+}
+
+$result->close();
+$conn->close();
+/*
 class A
 {
    static function askuser() {
@@ -33,4 +52,5 @@ if ($a == $b) {
 }
 
 A::askuser();
+*/
 ?>
