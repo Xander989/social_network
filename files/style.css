@@ -41,6 +41,11 @@ html, body {
     margin-left: 3%;
 }
 
+#Main {
+    position: relative;
+    left: 5%;
+}
+
 #Introducing {
     position: absolute;
     top: 20%;
@@ -54,7 +59,7 @@ html, body {
 body {
     opacity: 100%;
     animation-name: body;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
   }
 
 
