@@ -71,6 +71,13 @@
     _END;
     }
 
+    $stmt = $conn->prepare('INSERT INTO classics VALUES(?,?,?,?,?)');
+    $stmt->bind_param('sssss', $author, $title, $category, $year, $isbn);
+
+    $stmt->execute();
+    printf("%d Row inserted.\n", $stmt->affected_rows);
+    $stmt->close();
+
     $result->close();
     $conn->close();
 
